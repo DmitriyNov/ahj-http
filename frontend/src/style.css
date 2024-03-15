@@ -1,0 +1,28 @@
+
+
+
+
+
+
+
+
+
+
+
+.chek {
+    width: 10px;
+    height: 10px;
+    border: 1px solid green;
+}
+
+.edit {
+    width: 10px;
+    height: 10px;
+    border: 1px solid blue;
+}
+
+.delete {
+    width: 10px;
+    height: 10px;
+    border: 1px solid red;
+}

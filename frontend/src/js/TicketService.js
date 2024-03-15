@@ -9,11 +9,37 @@ export default class TicketService {
       });
     }
     
-    get(id, callback) {}
+    get(id, callback) {
+      createRequest({
+        method: "GET",
+        info: {method: "ticketById", id: id},
+        callback: callback,
+      });
+    }
   
-    create(data, callback) {}
+    create(data, callback) {
+      createRequest({
+        method: "POST",
+        info: {method: "createTicket"},
+        data: data,
+        callback: callback,
+      });
+    }
   
-    update(id, data, callback) {}
+    update(id, data, callback) {
+      createRequest({
+        method: "POST",
+        info: {method: "updateById", id: id},
+        data: data,
+        callback: callback,
+      });
+    }
   
-    delete(id, callback) {}
+    delete(id, callback) {
+      createRequest({
+        method: "GET",
+        info: {method: "deleteById", id: id},
+        callback: callback,
+      });
+    }
   }
