@@ -1,3 +1,35 @@
+body {
+    background-color: #c7c6c6;
+    color: #2b2b2b;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    min-width: 600px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.add-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0;
+}
+
+.add-button {
+    border: 2px solid rgb(80, 79, 79);
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 5px;
+}
 
 
 
@@ -5,24 +37,43 @@
 
 
 
+.tikets {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ticket {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 2px solid rgb(80, 79, 79);
+    border-radius: 5px;
+
+}
 
 
 
+
+
+
+.chek, .edit, .delete {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
 
 .chek {
-    width: 10px;
-    height: 10px;
-    border: 1px solid green;
+
 }
 
 .edit {
-    width: 10px;
-    height: 10px;
-    border: 1px solid blue;
+
 }
 
 .delete {
-    width: 10px;
-    height: 10px;
-    border: 1px solid red;
+
 }

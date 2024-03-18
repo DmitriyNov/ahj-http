@@ -16,8 +16,9 @@ const createRequest = async (options = {}) => {
                 url += item + '=' + options.info[item] + '&';
             }
             url = url.slice( 0, url.length - 1 );
-            for (item in options.data) {
+            for (let item in options.data) {
                 formData.append(item, options.data[item]);
+                // Почему-то не работает метод append, в объект formData не добавляются данные, соответственно запрос улетает пустой, в ответ статус 400
             }
             xhr.open(options.method, url);
             xhr.send(formData);
@@ -28,8 +29,10 @@ const createRequest = async (options = {}) => {
     xhr.addEventListener('load', () => {
         if (xhr.status >= 200 && xhr.status < 300) {
             try {
-                const data = JSON.parse(xhr.responseText);
-                options.callback(data);
+                if (xhr.responseText) {
+                    const data = JSON.parse(xhr.responseText);
+                    options.callback(data);
+                }
             } catch (e) {
                 console.error(e);
             }
